@@ -64,7 +64,7 @@ const scrollToElement = (target, delay) => {
 .header {
   border: 1px solid rgba(63, 7, 7, 0.3);
   border-radius: 8px;
-  font-family: 'Roboto';
+  font-family: 'Roboto',sans-serif;
 }
 
 .link {

@@ -20,7 +20,9 @@
           </div>
           <div class="text-center">
             <p class="text-xl text-gray-700 font-bold mb-2 custom-name">{{ skill.name }}</p>
-            <p class="text-base text-gray-400 font-normal custom-description" >{{ skill.description }}</p>
+            <p class="text-base text-gray-400 font-normal custom-description" >   <button
+                class="block w-full text-blue-800 text-sm font-semibold rounded-lg focus:outline-none focus:shadow-outline  hover:shadow-xs p-3 my-4">Show
+                Show more detail ...</button></p>
           </div>
           <transition name="fade">
             <ul v-if="skill.showFrameworks" class="absolute bottom-0 left-0 right-0 bg-white rounded-b-lg p-2 shadow-md">
@@ -115,8 +117,8 @@ const closeDialog = () => {
   opacity: 0;
 }
 .custom-text {
-    font-family: 'Roboto';
-    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 .custom-name{
     font-family: 'Roboto';
