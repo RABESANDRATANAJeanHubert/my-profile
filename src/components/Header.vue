@@ -8,7 +8,7 @@
             href="#contact"
             :class="['link', { active: activeLink === '#contact' }]"
             @click.prevent="handleClick('#contact')"
-          >Information</a>
+          >About</a>
         </li>
         <li>
           <a
