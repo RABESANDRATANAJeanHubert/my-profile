@@ -38,14 +38,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const activeLink = ref('#about')
 
 const handleClick = (target) => {
   activeLink.value = target
   scrollToElement(target, 0)
-};
+}
 
 const scrollToElement = (target, delay) => {
   setTimeout(() => {
@@ -57,14 +57,14 @@ const scrollToElement = (target, delay) => {
       })
     }
   }, delay)
-};
+}
 </script>
 
 <style scoped>
 .header {
   border: 1px solid rgba(63, 7, 7, 0.3);
   border-radius: 8px;
-  font-family: 'Roboto',sans-serif;
+  font-family: var(--font-family);
 }
 
 .link {
@@ -76,11 +76,11 @@ const scrollToElement = (target, delay) => {
 
 .link:hover,
 .link.active {
-  border-color: rgba(255, 255, 255, 0.6);
-  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--link-border-color);
+  background-color: var(--link-background-color);
   text-decoration: none;
   animation: hoverAnimation 0.3s forwards;
-  border: 1px solid rgb(55, 55, 209);
+  border: 1px solid rgb(55, 55, 209) var(--link-border);
 }
 
 @keyframes hoverAnimation {

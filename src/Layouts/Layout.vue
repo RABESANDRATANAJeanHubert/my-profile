@@ -51,7 +51,7 @@ const checkActiveSection = () => {
 <style>
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-family);
 }
 
 main {

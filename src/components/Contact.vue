@@ -118,8 +118,8 @@
 </script>
 <style scoped>
 .custom-contact{
-  font-family: 'Roboto';
-  font-size: 14px;
+  font-family: var(--font-family);
+  font-size: var(font-size);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
     :root {

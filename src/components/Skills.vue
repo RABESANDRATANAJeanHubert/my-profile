@@ -45,52 +45,9 @@
 <script setup>
 import { ref } from 'vue';
 import DialogSkills from './DialogSkills.vue'; // Adjust the path as necessary
+import { skilList } from '../models';
 
-const skills = ref([
-  {
-    name: 'Programming Languages',
-    description: 'Skilled in various programming languages such as JavaScript, Python, Java, etc.',
-    image: 'langage.png', // Adjust the path to your actual asset location
-    frameworks: ['Vue.js', 'React.js', 'Angular', 'Node.js'],
-    showFrameworks: false, // Initially hide frameworks
-  },
-  {
-    name: 'Frameworks',
-    description: 'Skilled in frontend and backend frameworks like Vue.js, React.js, Express.js, etc.',
-    image: 'framework.jpg', // Adjust the path to your actual asset location
-    frameworks: ['Vue.js', 'React.js', 'Angular', 'Express.js'],
-    showFrameworks: false, // Initially hide frameworks
-  },
-  {
-    name: 'Web Technologies',
-    description: 'Proficient in web technologies such as HTML5, CSS3, JavaScript, etc.',
-    image: 'WebTechnologie.jpeg', // Adjust the path to your actual asset location
-    frameworks: ['HTML5', 'CSS3', 'JavaScript','Tailwind', 'Bootstrap'],
-    showFrameworks: false, // Initially hide frameworks
-  },
-  {
-    name: 'Database Management Systems',
-    description: 'Experienced in managing databases like MySQL, PostgreSQL, MongoDB, etc.',
-    image: 'databaseManagement.jpg', // Adjust the path to your actual asset location
-    frameworks: ['MySQL', 'PostgreSQL', 'MongoDB'],
-    showFrameworks: false, // Initially hide frameworks
-  },
-  {
-    name: 'Design Methodologies',
-    description: 'Familiar with design methodologies such as Agile, Scrum, Waterfall, etc.',
-    image: 'designMethodologie.jpg', // Adjust the path to your actual asset location
-    frameworks: ['Agile', 'Scrum', 'Waterfall'],
-    showFrameworks: false, // Initially hide frameworks
-  },
-  {
-    name: 'Testing',
-    description: 'Skilled in various testing methodologies and frameworks like Jest, Cypress, Selenium, etc.',
-    image: 'testing.jpg', // Adjust the path to your actual asset location
-    frameworks: ['Jest', 'Mocha', 'Selenium', 'Cypress'],
-    showFrameworks: false, // Initially hide frameworks
-  }
-  // Add more skills as needed
-]);
+const skills = ref(skilList);
 
 const showDialog = ref(false);
 const selectedSkill = ref({});
@@ -113,19 +70,19 @@ const closeDialog = () => {
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+.fade-enter, .fade-leave-to {
   opacity: 0;
 }
 .custom-text {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family);
     font-size: 16px;
 }
 .custom-name{
-    font-family: 'Roboto';
-    font-size: 14px;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
 }
 .custom-description{
-    font-family: 'Roboto';
-    font-size: 14px;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
 }
 </style>

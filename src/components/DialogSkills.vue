@@ -92,52 +92,44 @@
       </div>
     </div>
   </template>
-  
-  <script>
-  export default {
-    name: 'DialogSkills',
-    props: {
-      showDialog: {
-        type: Boolean,
-        required: true,
-      },
-      selectedSkill: {
-        type: Object,
-        required: true,
-        default: () => ({
-          name: '',
-          image: '',
-          description: '',
-          frameworks: []
-        })
-      },
-    },
-    data() {
-      return {
-        currentTime: '',
-      };
-    },
-    computed: {
-      backgroundStyle() {
-        return {
-          backgroundImage: `url(${this.selectedSkill.image})`,
-          backgroundSize: 'cover',
-        };
-      },
-    },
-    methods: {
-      closeDialog() {
-        this.$emit('close-dialog');
-      },
 
-    },
-  };
-  </script>
-  
+<script setup>
+import { defineProps, computed } from 'vue'
+import { event } from './config'
+
+const props = defineProps({
+  showDialog: {
+    type: Boolean,
+    required: true,
+  },
+  selectedSkill: {
+    type: Object,
+    required: true,
+    default: () => ({
+      name: '',
+      image: '',
+      description: '',
+      frameworks: []
+    })
+  }
+})
+
+const emit = defineEmits([event.closeDialog])
+
+const closeDialog = () => {
+  emit(event.closeDialog)
+}
+
+const backgroundStyle = computed(() => ({
+  backgroundImage: `url(${props.selectedSkill.image})`,
+  backgroundSize: 'cover'
+}))
+</script>
+
   <style scoped>
   .transition-all {
     transition: all 0.3s ease-in-out;
-    font-family: 'Roboto';
+    font-family: var(--font-family);
   }
   </style>
   

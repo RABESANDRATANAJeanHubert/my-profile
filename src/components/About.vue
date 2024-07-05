@@ -29,6 +29,6 @@
 }
 
 #about {
-  font-family: 'Roboto';
+  font-family: var(--font-family);
 }
 </style>
