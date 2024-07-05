@@ -1,8 +1,6 @@
 <template>
   <section id="about">
     <div class="container mx-auto text-center">
-
-
 <div class="bg-white-100 border-t border-b border-blue-500 text-black-700 px-4 py-3" role="alert">
   <div class="group relative -ml-4 flex scroll-mt-40 items-center pl-4">
       <div class="group relative -ml-4 flex scroll-mt-40 items-center pl-4">
@@ -16,9 +14,7 @@
 </p>
     </div>
 </div>
-
   </section>
-
 </template>
 
 <script setup>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="background">
      <Layout/>
     </div>
   </template>
@@ -9,16 +9,7 @@ import Layout from './Layouts/Layout.vue'
 </script>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.background {
+  background-color: rgb(241, 241, 241);
 }
 </style>

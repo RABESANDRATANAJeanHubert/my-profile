@@ -80,7 +80,7 @@ const scrollToElement = (target, delay) => {
   background-color: var(--link-background-color);
   text-decoration: none;
   animation: hoverAnimation 0.3s forwards;
-  border: 1px solid rgb(55, 55, 209) var(--link-border);
+  border: var(--link-border);
 }
 
 @keyframes hoverAnimation {

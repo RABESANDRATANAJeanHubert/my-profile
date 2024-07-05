@@ -26,26 +26,24 @@ import About from '../components/About.vue';
 import Projects from '../components/Projects.vue';
 import Skills from '../components/Skills.vue';
 
-const activeSection = ref('');
+const activeSection = ref('')
 
 onMounted(() => {
-  checkActiveSection();
-
+  checkActiveSection()
   window.addEventListener('scroll', checkActiveSection);
 });
 
 const checkActiveSection = () => {
-  const sections = document.querySelectorAll('.section');
+  const sections = document.querySelectorAll('.section')
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100; // Adjust offset as needed
-    const sectionId = section.getAttribute('id');
+    const sectionTop = section.offsetTop - 100
+    const sectionId = section.getAttribute('id')
     const scrollPosition = window.scrollY;
-
     if (scrollPosition >= sectionTop) {
       activeSection.value = sectionId;
     }
-  });
-};
+  })
+}
 </script>
 
 <style>
@@ -64,6 +62,6 @@ main {
 }
 
 #header-navigation a.active {
-  color: #581ff8; /* Adjust color as needed */
+  color: var(--header-navigation-color);
 }
 </style>

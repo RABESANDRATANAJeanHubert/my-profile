@@ -3,7 +3,7 @@
       v-show="showDialog"
       :class="[
         'fixed inset-0 z-[50] grid h-screen w-screen place-items-center transition-all duration-300',
-        showDialog ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+        isShowDialog
       ]"
     >
       <div class="relative m-4 w-3/4 min-w-[75%] max-w-[75%] rounded-lg bg-white shadow-2xl">
@@ -115,11 +115,8 @@ const props = defineProps({
 })
 
 const emit = defineEmits([event.closeDialog])
-
-const closeDialog = () => {
-  emit(event.closeDialog)
-}
-
+const closeDialog = () => { emit(event.closeDialog) }
+const isShowDialog = computed(() => props.showDialog ? 'opacity-100 scale-100' : 'opacity-0 scale-90')
 const backgroundStyle = computed(() => ({
   backgroundImage: `url(${props.selectedSkill.image})`,
   backgroundSize: 'cover'

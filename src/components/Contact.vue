@@ -1,7 +1,7 @@
 <template>
 <div>
 
-    <div class="container mx-auto my-5 p-5 custom-contact">
+    <div class="container mx-auto  p-5 custom-contact">
         <div class="md:flex no-wrap md:-mx-2 ">
             <!-- Left Side -->
             <div class="w-full md:w-3/12 md:mx-2">
@@ -75,7 +75,7 @@
                         Full Information</button>
                 </div>
                 <!-- End of about section -->
-                <div class="my-4"></div>
+                <div class="my-14"></div>
                 <!-- Experience and education -->
                 <div class="bg-white p-3 shadow-sm rounded-sm">
 
@@ -117,6 +117,7 @@
 <script setup>
 </script>
 <style scoped>
+
 .custom-contact{
   font-family: var(--font-family);
   font-size: var(font-size);
