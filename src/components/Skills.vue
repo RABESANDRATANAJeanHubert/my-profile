@@ -44,17 +44,13 @@
 
 <script setup>
 import { ref } from 'vue';
-import DialogSkills from './DialogSkills.vue'; // Adjust the path as necessary
+import DialogSkills from './DialogSkills.vue'; 
 import { skilList } from '../models';
 
 const skills = ref(skilList);
 
 const showDialog = ref(false);
 const selectedSkill = ref({});
-
-const toggleFrameworks = (index) => {
-  skills.value[index].showFrameworks = !skills.value[index].showFrameworks;
-};
 
 const openDialog = (skill) => {
   selectedSkill.value = skill;

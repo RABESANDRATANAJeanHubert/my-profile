@@ -6,7 +6,6 @@
                 <div class="w-full space-x-12 flex justify-center text-gray-300 sm:w-7/12 md:justify-start">
                     <ul class="list-disc list-inside space-y-8">
                         <li><a href="#" class="hover:text-sky-400 transition">Home</a></li>
-
                         <li><a href="#" class="hover:text-sky-400 transition">About</a></li>
                         <li><a href="#" class="hover:text-sky-400 transition">Guide</a></li>
                         <li><a href="#" class="hover:text-sky-400 transition">Blocks</a></li>
@@ -102,7 +101,4 @@
     <div aria-hidden="true" class="absolute inset-0 w-full h-full bg-[#020314] opacity-80"></div>
 </footer>
   </template>
-  
-  <script setup>
-  </script>
   
